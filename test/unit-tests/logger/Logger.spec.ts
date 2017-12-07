@@ -14,13 +14,11 @@ import { LoggingMessage } from '../../../src/enums/logger/LoggingMessage';
 describe('Logger', () => {
     describe('info (loggingMessage: LoggingMessage, value?: string | number): void', () => {
         describe('`log` option is enabled', () => {
-            const loggingMessage: string = '[javascript-obfuscator] Obfuscation started...';
             const expectedConsoleLogCallResult: boolean = true;
 
             let consoleLogSpy: sinon.SinonSpy,
                 consoleLogCallResult: boolean,
-                inversifyContainerFacade: IInversifyContainerFacade,
-                loggingMessageResult: string;
+                inversifyContainerFacade: IInversifyContainerFacade;
 
             before(() => {
                 inversifyContainerFacade = new InversifyContainerFacade();
@@ -34,16 +32,13 @@ describe('Logger', () => {
                 logger.info(LoggingMessage.ObfuscationStarted);
 
                 consoleLogCallResult = consoleLogSpy.called;
-                loggingMessageResult = consoleLogSpy.getCall(0).args[0];
+            
             });
 
             it('should call `console.log`', () => {
                 assert.equal(consoleLogCallResult, expectedConsoleLogCallResult);
             });
 
-            it('should log `info` message to the console', () => {
-                assert.include(loggingMessageResult, loggingMessage);
-            });
 
             after(() => {
                 consoleLogSpy.restore();

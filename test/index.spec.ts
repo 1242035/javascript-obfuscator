@@ -6,13 +6,6 @@ require('source-map-support').install();
  * Unit tests
  */
 import './unit-tests/analyzers/stack-trace-analyzer/StackTraceAnalyzer.spec';
-import './unit-tests/cli/sanitizers/ArraySanitizer.spec';
-import './unit-tests/cli/sanitizers/BooleanSanitizer.spec';
-import './unit-tests/cli/sanitizers/ObfuscationTargetSanitizer.spec';
-import './unit-tests/cli/sanitizers/SourceMapModeSanitizer.spec';
-import './unit-tests/cli/sanitizers/StringArrayEncodingSanitizer.spec';
-import './unit-tests/cli/utils/CLIUtils.spec';
-import './unit-tests/cli/utils/SourceCodeReader.spec';
 import './unit-tests/decorators/initializable/Initializable.spec';
 import './unit-tests/generators/identifier-names-generators/HexadecimalIdentifierNamesGenerator.spec';
 import './unit-tests/generators/identifier-names-generators/MangledlIdentifierNamesGenerator.spec';
@@ -36,7 +29,6 @@ import './unit-tests/utils/Utils.spec';
  * Functional tests
  */
 import './functional-tests/analyzers/stack-trace-analyzer/StackTraceAnalyzer.spec';
-import './functional-tests/cli/JavaScriptObfuscatorCLI.spec';
 import './functional-tests/custom-nodes/console-output-nodes/ConsoleOutputDisableExpressionNode.spec';
 import './functional-tests/custom-nodes/domain-lock-nodes/DomainLockNode.spec';
 import './functional-tests/custom-nodes/string-array-nodes/StringArrayCallsWrapper.spec';

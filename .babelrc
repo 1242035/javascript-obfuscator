@@ -1,9 +1,7 @@
 {
-  "generatorOpts": {
-    "retainFunctionParens": true
-  },
-  "presets": ["es2015"],
-  "plugins": [
-    "array-includes"
+  "presets": [
+    ["env", { "modules": false }],
+    "stage-3"
   ]
 }
+
